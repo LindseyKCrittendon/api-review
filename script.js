@@ -16,8 +16,9 @@ fetch("http://localhost:8088/restaurants")
            console.log(parsedRestaurants[0])
            document.querySelector("#restaurantNameContainer").innerHTML += 
            `<h4>${restaurant.restaurant.name}</h4>
-           <p>${restaurant.restaurant.location.address}</p>`
-        console.log(restaurant.restaurant.location.address)
+           <p>${restaurant.restaurant.location.address}</p>
+           <p>${restaurant.restaurant.user_rating.aggregate_rating}</p>`;
+        console.log(restaurant.restaurant.user_rating.aggregate_rating)
         })
     });
 
